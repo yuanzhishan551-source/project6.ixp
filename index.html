@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shannayuan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f6f4;
+      --text: #111;
+      --muted: #999;
+      --gap: 10px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 400;
+      min-height: 100vh;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 32px;
+      background: var(--bg);
+    }
+
+    .nav-logo {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── Grid ── */
+    .grid-wrap {
+      padding: calc(72px + 32px) 32px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap);
+    }
+
+    @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+
+    /* ── Item ── */
+    .item {
+      position: relative;
+      overflow: visible;
+      cursor: pointer;
+      display: block;
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+
+    .item img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .item-placeholder {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #d9d4cd;
+    }
+
+    /* title below image, shown on hover */
+    .item-title {
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: 0.03em;
+      opacity: 0;
+      transition: opacity 0.25s, bottom 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .item:hover .item-title {
+      opacity: 1;
+      bottom: -22px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 48px 32px 36px;
+      margin-top: 48px;
+    }
+
+    .footer-year {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .footer-contact {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .footer-contact:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <a class="nav-logo" href="#">Shannayuan</a>
+</nav>
+
+<!-- Grid -->
+<div class="grid-wrap">
+  <div class="grid">
+
+    <a class="item" href="https://project1.ixp2.shannayuan.com" target="_blank" rel="noopener">
+      <img src="1.png" alt="Project 01" />
+      <span class="item-title">Project 01</span>
+    </a>
+
+    <a class="item" href="https://project2.ixp2.shannayuan.com" target="_blank" rel="noopener">
+      <img src="2.png" alt="Project 02" />
+      <span class="item-title">Project 02</span>
+    </a>
+
+    <a class="item" href="https://project3.ixp2.shannayuan.com" target="_blank" rel="noopener">
+      <img src="3.png" alt="Project 03" />
+      <span class="item-title">Project 03</span>
+    </a>
+
+    <a class="item" href="https://project4.ixp2.shannayuan.com" target="_blank" rel="noopener">
+      <img src="4.png" alt="Project 04" />
+      <span class="item-title">Project 04</span>
+    </a>
+
+    <a class="item" href="https://project5.ixp2.shannayuan.com" target="_blank" rel="noopener">
+      <img src="5.png" alt="Project 05" />
+      <span class="item-title">Project 05</span>
+    </a>
+
+  </div>
+</div>
+
+
+</body>
+</html>
